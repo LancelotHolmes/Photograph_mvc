@@ -11,6 +11,7 @@ namespace Photograph_mvc.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class User
     {
@@ -19,11 +20,18 @@ namespace Photograph_mvc.Models
             this.Blogs = new HashSet<Blog>();
         }
     
+        [Required]
         public int uId { get; set; }
+        [Required(ErrorMessage = "User Name is required")]
         public string username { get; set; }
+        [Required(ErrorMessage = "Password is required")]
         public string password { get; set; }
+        [Required(ErrorMessage="Email Address is required")]
+        [RegularExpression(@".*@.*\..*",ErrorMessage="Email address is invalid")]
         public string email { get; set; }
+        [Range(1,100,ErrorMessage="Sorry, the age must be between 1 and 100")]
         public Nullable<int> age { get; set; }
+        [StringLength(11)]
         public string phoneNumber { get; set; }
     
         public virtual ICollection<Blog> Blogs { get; set; }

@@ -15,13 +15,14 @@
     <fieldset>
         <legend>Blog</legend>
 
-        <div class="editor-label">
+        <%--<div class="editor-label">
             <%: Html.LabelFor(model => model.bId) %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.bId) %>
             <%: Html.ValidationMessageFor(model => model.bId) %>
-        </div>
+        </div>--%>
+        <%: Html.HiddenFor(model=>model.bId) %>
 
         <div class="editor-label">
             <%: Html.LabelFor(model => model.userId, "User") %>
@@ -40,10 +41,10 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.message) %>
+            <%: Html.Label("Message") %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.message) %>
+            <%: Html.TextAreaFor(model => model.message)%>
             <%: Html.ValidationMessageFor(model => model.message) %>
         </div>
 
@@ -56,7 +57,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.postDate) %>
+            <%: Html.Label("Post Date") %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.postDate) %>

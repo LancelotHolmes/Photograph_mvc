@@ -18,7 +18,7 @@ namespace Photograph_mvc.Controllers
 
         public ActionResult Index()
         {
-            return View(db.Users.ToList());
+            return View(db.Users.OrderBy(u=>u.username).ToList());
         }
 
         //

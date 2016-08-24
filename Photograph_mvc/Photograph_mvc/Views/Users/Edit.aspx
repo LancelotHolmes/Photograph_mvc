@@ -15,16 +15,10 @@
     <fieldset>
         <legend>User</legend>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.uId) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.uId) %>
-            <%: Html.ValidationMessageFor(model => model.uId) %>
-        </div>
+       <%:Html.HiddenFor(model=>model.uId) %>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.username) %>
+            <%: Html.Label("Name") %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.username) %>
@@ -32,7 +26,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.password) %>
+            <%: Html.Label("Password") %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.password) %>
@@ -40,7 +34,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.email) %>
+            <%: Html.Label("Email") %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.email) %>
@@ -48,7 +42,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.age) %>
+            <%: Html.Label("Age") %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.age) %>
@@ -56,7 +50,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.phoneNumber) %>
+            <%: Html.Label("Phone Number") %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.phoneNumber) %>

@@ -19,7 +19,7 @@ namespace Photograph_mvc.Controllers
         public ActionResult Index()
         {
             var blogs = db.Blogs.Include(b => b.User);
-            return View(blogs.ToList());
+            return View(blogs.OrderBy(b=>b.subject).ToList());
         }
 
         //

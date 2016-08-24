@@ -167,6 +167,5 @@ E:\githubWorkspace\Photograph_mvc\Photograph_mvc\Photograph_mvc\Photograph_mvc\b
 E:\githubWorkspace\Photograph_mvc\Photograph_mvc\Photograph_mvc\Photograph_mvc\bin\ru\System.Spatial.resources.dll
 E:\githubWorkspace\Photograph_mvc\Photograph_mvc\Photograph_mvc\Photograph_mvc\bin\zh-Hans\System.Spatial.resources.dll
 E:\githubWorkspace\Photograph_mvc\Photograph_mvc\Photograph_mvc\Photograph_mvc\bin\zh-Hant\System.Spatial.resources.dll
-E:\githubWorkspace\Photograph_mvc\Photograph_mvc\Photograph_mvc\Photograph_mvc\obj\Debug\Photograph_mvc.csprojResolveAssemblyReference.cache
 E:\githubWorkspace\Photograph_mvc\Photograph_mvc\Photograph_mvc\Photograph_mvc\obj\Debug\Photograph_mvc.dll
 E:\githubWorkspace\Photograph_mvc\Photograph_mvc\Photograph_mvc\Photograph_mvc\obj\Debug\Photograph_mvc.pdb

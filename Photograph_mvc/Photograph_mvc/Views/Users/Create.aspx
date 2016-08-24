@@ -15,13 +15,13 @@
     <fieldset>
         <legend>User</legend>
 
-        <div class="editor-label">
+        <%--<div class="editor-label">
             <%: Html.LabelFor(model => model.uId) %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.uId) %>
             <%: Html.ValidationMessageFor(model => model.uId) %>
-        </div>
+        </div>--%>
 
         <div class="editor-label">
             <%: Html.LabelFor(model => model.username) %>
