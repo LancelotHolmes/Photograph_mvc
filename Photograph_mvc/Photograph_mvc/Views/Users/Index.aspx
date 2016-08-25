@@ -5,7 +5,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
+<div class="container padding100">
 <h2>User Management</h2>
 
 <p>
@@ -75,7 +75,7 @@
         </tbody>
 
 </table>
-
+    </div>
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="FeaturedContent" runat="server">
@@ -98,7 +98,9 @@
            
         </script>
     }--%>
+    <script src="../../Scripts/jquery.js"></script>
     <%:Scripts.Render("~/Scripts/myScript.js") %>
     <%: Styles.Render("~/Content/myStyleSheet.css") %>
-
+<%--    <link href="../../Content/myStyleSheet.css" rel="stylesheet" type="text/css" />
+    <script src="../../Scripts/myScript.js"></script>--%>
 </asp:Content>

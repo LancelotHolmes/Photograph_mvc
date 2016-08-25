@@ -5,7 +5,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
+<div class="container padding100">
 <h2>Create</h2>
 
 <% using (Html.BeginForm()) { %>
@@ -72,7 +72,7 @@
 <div>
     <%: Html.ActionLink("Back to List", "Index") %>
 </div>
-
+</div>
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="FeaturedContent" runat="server">

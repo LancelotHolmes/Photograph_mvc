@@ -9,7 +9,13 @@ namespace Photograph_mvc
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery.js",
+                        "~/Scripts/bootstrap.min.js",
+                        "~/Scripts/wow.min.js",
+                        "~/Scripts/tutorial.js",
+                        "~/Scripts/owl.carousel.js",
+                        "~/Scripts/jquery.smartmenus.js",
+                        "~/Scripts/jquery.smartmenus.bootstrap.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
                         "~/Scripts/jquery-ui-{version}.js"));
@@ -23,7 +29,15 @@ namespace Photograph_mvc
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css",
+                "~/Content/bootstrap.min.css",
+                "~/Content/jquery.smartmenus.bootstrap.css",
+                "~/Content/owl.carousel.css",
+                "~/Content/owl.theme.css",
+                "~/Content/owl.transitions.css",
+                "~/Content/1-col-portfolio.css",
+                //"~/Content/font-awesome.min.css",
+                "~/Content/calendarstyle.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",

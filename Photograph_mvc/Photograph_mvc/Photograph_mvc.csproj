@@ -221,6 +221,19 @@
       <DependentUpon>db_ts.mdf</DependentUpon>
     </Content>
     <Content Include="Content\myStyleSheet.css" />
+    <Content Include="Content\1-col-portfolio.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\calendarstyle.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\gridview.css" />
+    <Content Include="Content\jquery.smartmenus.bootstrap.css" />
+    <Content Include="Content\owl.carousel.css" />
+    <Content Include="Content\owl.theme.css" />
+    <Content Include="Content\owl.transitions.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\tablestyle.css" />
+    <Content Include="Content\the-big-picture.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -276,14 +289,30 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <EntityDeploy Include="Models\Users.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Users.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="Images\12.jpg" />
+    <Content Include="Images\13.jpg" />
+    <Content Include="Images\14.jpg" />
+    <Content Include="Images\700x300.jpg" />
     <Content Include="Models\Users.edmx.diagram">
       <DependentUpon>Users.edmx</DependentUpon>
     </Content>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Models\Users.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -295,11 +324,19 @@
       <DependentUpon>Users.edmx</DependentUpon>
       <LastGenOutput>Users.cs</LastGenOutput>
     </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Bubble.js" />
+    <Content Include="Scripts\contact.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.backstretch.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.smartmenus.bootstrap.js" />
+    <Content Include="Scripts\jquery.smartmenus.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
@@ -310,6 +347,9 @@
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\myScript.js" />
+    <Content Include="Scripts\owl.carousel.js" />
+    <Content Include="Scripts\tutorial.js" />
+    <Content Include="Scripts\wow.min.js" />
     <Content Include="Views\Blogs\Create.aspx" />
     <Content Include="Views\Blogs\Delete.aspx" />
     <Content Include="Views\Blogs\Details.aspx" />

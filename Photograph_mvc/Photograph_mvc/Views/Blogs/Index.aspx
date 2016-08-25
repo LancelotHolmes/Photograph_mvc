@@ -5,7 +5,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
+<div class="container padding100">
     <h2>Blog Management</h2>
 
     <p>
@@ -75,13 +75,14 @@
 
         </tbody>
     </table>
-
+</div>
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="FeaturedContent" runat="server">
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="ScriptsSection" runat="server">
+    <script src="../../Scripts/jquery.js"></script>
         <%:Scripts.Render("~/Scripts/myScript.js") %>
     <%: Styles.Render("~/Content/myStyleSheet.css") %>
 </asp:Content>

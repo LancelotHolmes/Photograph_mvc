@@ -5,7 +5,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
+<div class="container padding100">
 <h2>Details</h2>
 
 <fieldset>
@@ -57,7 +57,7 @@
     <%: Html.ActionLink("Edit", "Edit", new {  id=Model.bId  }) %> |
     <%: Html.ActionLink("Back to List", "Index") %>
 </p>
-
+</div>
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="FeaturedContent" runat="server">
