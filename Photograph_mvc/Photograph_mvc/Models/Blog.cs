@@ -24,6 +24,7 @@ namespace Photograph_mvc.Models
         public string message { get; set; }
         public string image { get; set; }
         [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString="{0:yyyy-MM-dd}",ApplyFormatInEditMode=true)]
         public Nullable<System.DateTime> postDate { get; set; }
     
         public virtual User User { get; set; }

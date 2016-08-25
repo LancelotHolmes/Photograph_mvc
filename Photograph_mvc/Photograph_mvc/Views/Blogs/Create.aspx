@@ -43,7 +43,7 @@
             <%: Html.LabelFor(model => model.message) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.message) %>
+            <%: Html.TextAreaFor(model => model.message, new { rows=5})%>
             <%: Html.ValidationMessageFor(model => model.message) %>
         </div>
 

@@ -40,7 +40,7 @@ namespace Photograph_mvc.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.userId = new SelectList(db.Users, "uId", "username");
+            ViewBag.userId = new SelectList(db.Users.OrderBy(u=>u.username), "uId", "username");
             return View();
         }
 
@@ -72,7 +72,7 @@ namespace Photograph_mvc.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.userId = new SelectList(db.Users, "uId", "username", blog.userId);
+            ViewBag.userId = new SelectList(db.Users.OrderBy(u=>u.username), "uId", "username", blog.userId);
             return View(blog);
         }
 

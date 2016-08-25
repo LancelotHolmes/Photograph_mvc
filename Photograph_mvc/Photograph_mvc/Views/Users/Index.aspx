@@ -19,7 +19,8 @@
         <input type="submit" value="Submit" />  
     <% } %>  
 
-<table>
+<table id="tb_users">
+    <thead>
     <tr>
         <th>
             <%: Html.DisplayNameFor(model => model.uId) %>
@@ -41,7 +42,8 @@
         </th>
         <th></th>
     </tr>
-
+    </thead>
+    <tbody>
 <% foreach (var item in Model) { %>
     <tr>
         <td>
@@ -69,6 +71,8 @@
         </td>
     </tr>
 <% } %>
+    
+        </tbody>
 
 </table>
 
@@ -78,4 +82,23 @@
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="ScriptsSection" runat="server">
+    <%--@section Scripts{
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#tb_users tbody tr:even').css('background-color', 'silver');
+
+                $('#tb_users tr').mouseover(function () {
+                    $(this).css('background-color', 'yellow');
+                });
+
+                $('#tb_users tr').mouseout(function () {
+                    $(this).removeAttr('background-color', 'yellow');
+                });
+            });
+           
+        </script>
+    }--%>
+    <%:Scripts.Render("~/Scripts/myScript.js") %>
+    <%: Styles.Render("~/Content/myStyleSheet.css") %>
+
 </asp:Content>

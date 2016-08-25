@@ -19,7 +19,8 @@
     <input type="submit" value="Submit" />
     <% } %>
 
-    <table>
+    <table id="tb_blogs">
+        <thead>
         <tr>
             <th>
                 <%: Html.DisplayNameFor(model => model.bId) %>
@@ -41,7 +42,8 @@
             </th>
             <th></th>
         </tr>
-
+            </thead>
+        <tbody>
         <% foreach (var item in Model)
            { %>
         <tr>
@@ -70,6 +72,8 @@
             </td>
         </tr>
         <% } %>
+
+        </tbody>
     </table>
 
 </asp:Content>
@@ -78,4 +82,6 @@
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="ScriptsSection" runat="server">
+        <%:Scripts.Render("~/Scripts/myScript.js") %>
+    <%: Styles.Render("~/Content/myStyleSheet.css") %>
 </asp:Content>
