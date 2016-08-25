@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Photograph_mvc.Models.User>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    User Management
+    User Management - Trip & Shoot
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -12,7 +12,8 @@
     <%: Html.ActionLink("Create New", "Create") %>
 </p>
 
-    
+    </form>
+
     <% using(Html.BeginForm("Search", "Users")) %>  
     <% { %>  
         Enter User Name to search:<br />  <%= Html.TextBox("userName") %>  

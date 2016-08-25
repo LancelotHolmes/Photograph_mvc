@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Photograph_mvc.Models.User>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Search
+    User Search - Trip & Shoot
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -11,7 +11,17 @@
 <p>
     <%: Html.ActionLink("Create New", "Create") %>
 </p>
-<table>
+
+    </form>
+
+    <% using(Html.BeginForm("Search", "Users")) %>  
+    <% { %>  
+        Enter User Name to search:<br />  <%= Html.TextBox("userName") %>  
+        <input type="submit" value="Submit" />  
+    <% } %>  
+
+<table id="tb_users">
+    <thead>
     <tr>
         <th>
             <%: Html.DisplayNameFor(model => model.uId) %>
@@ -33,7 +43,8 @@
         </th>
         <th></th>
     </tr>
-
+    </thead>
+    <tbody>
 <% foreach (var item in Model) { %>
     <tr>
         <td>
@@ -61,7 +72,7 @@
         </td>
     </tr>
 <% } %>
-
+        </tbody>
 </table>
 </div>
 </asp:Content>
@@ -70,4 +81,7 @@
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="ScriptsSection" runat="server">
+        <script src="../../Scripts/jquery.js"></script>
+    <%:Scripts.Render("~/Scripts/myScript.js") %>
+    <%: Styles.Render("~/Content/myStyleSheet.css") %>
 </asp:Content>

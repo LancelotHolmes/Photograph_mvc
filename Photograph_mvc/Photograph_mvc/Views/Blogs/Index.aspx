@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Photograph_mvc.Models.Blog>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Blog Management
+    Blog Management - Trip & Shoot
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -11,6 +11,8 @@
     <p>
         <%: Html.ActionLink("Create New", "Create") %>
     </p>
+
+    </form>
 
     <% using (Html.BeginForm("Search", "Blogs")) %>
     <% { %>  

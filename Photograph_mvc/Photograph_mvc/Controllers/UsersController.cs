@@ -126,8 +126,6 @@ namespace Photograph_mvc.Controllers
             var users = from s in db.Users
                         where s.username.Contains(userName)
                         select s;
-
-
             return View(users);
         }
 
