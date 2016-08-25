@@ -1,13 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Photograph_mvc.Models.Blog>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Blog Edit - Trip & Shoot
+    Blogs Edit - Trip & Shoot
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-<div class="container padding100">
+<div class="container padding50">
 <h2>Edit</h2>
-
 <% using (Html.BeginForm()) { %>
     <%: Html.AntiForgeryToken() %>
     <%: Html.ValidationSummary(true) %>
@@ -27,6 +26,7 @@
         <div class="editor-label">
             <%: Html.LabelFor(model => model.userId, "User") %>
         </div>
+
         <div class="editor-field">
             <%: Html.DropDownList("userId", String.Empty) %>
             <%: Html.ValidationMessageFor(model => model.userId) %>
@@ -52,8 +52,9 @@
             <%: Html.LabelFor(model => model.image) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.image) %>
-            <%: Html.ValidationMessageFor(model => model.image) %>
+ <%--           <%: Html.EditorFor(model => model.image) %>--%>
+            <img src="<%:Html.DisplayFor(model => model.image)%>" alt="No Picture" class="img-rounded" />
+<%--            <%: Html.ValidationMessageFor(model => model.image) %>--%>
         </div>
 
         <div class="editor-label">
@@ -63,7 +64,7 @@
             <%: Html.EditorFor(model => model.postDate) %>
             <%: Html.ValidationMessageFor(model => model.postDate) %>
         </div>
-
+        <br />
         <p>
             <input type="submit" value="Save" />
         </p>

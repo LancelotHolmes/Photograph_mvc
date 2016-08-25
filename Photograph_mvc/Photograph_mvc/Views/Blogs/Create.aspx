@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Photograph_mvc.Models.Blog>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Blog Create - Trip & Shoot
+    Blogs Create - Trip & Shoot
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -15,13 +15,13 @@
     <fieldset>
         <legend>Blog</legend>
 
-        <div class="editor-label">
+<%--        <div class="editor-label">
             <%: Html.LabelFor(model => model.bId) %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.bId) %>
             <%: Html.ValidationMessageFor(model => model.bId) %>
-        </div>
+        </div>--%>
 
         <div class="editor-label">
             <%: Html.LabelFor(model => model.userId, "User") %>

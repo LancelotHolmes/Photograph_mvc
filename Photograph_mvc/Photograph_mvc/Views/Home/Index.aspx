@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage" %>
 
 <asp:Content ID="indexTitle" ContentPlaceHolderID="TitleContent" runat="server">
-    Home Page - Trip & Shoot
+    Home Page - My ASP.NET MVC Application
 </asp:Content>
 
 <asp:Content ID="indexContent" ContentPlaceHolderID="MainContent" runat="server">
@@ -24,12 +24,7 @@
                 <div class="main-text hidden-xs">
                     <div class="col-md-12 text-center">
                         <h1>The<b class="yellow"> world</b> puts off its <b class="yellow">mask </b><br />
-                            <span class="span">of vastness to its lover.</span></h1>
-                        
-                        <%--<div class="">
-                            <asp:HyperLink ID="HyperLink1" runat="server" CssClass="btn btn-clear btn-sm btn-min-block" NavigateUrl="~/login.aspx">Login</asp:HyperLink>
-                            <asp:HyperLink ID="HyperLink2" runat="server" CssClass="btn btn-clear btn-sm btn-min-block" NavigateUrl="~/register.aspx">Registration</asp:HyperLink>
-                        </div>--%>
+                            <span class="span">of vastness to its lover.</span></h1>             
                     </div>
                 </div>
             </div>
@@ -73,8 +68,9 @@
             <div class="row">
                 <div class="col-md-7">
                     <a href="#">
-                        <img class="img-responsive animated wow fadeInLeft" data-wow-delay="0.2s" src="../../Images/700x300.jpg"
-                            alt="" />
+                       <%-- <img class="img-responsive animated wow fadeInLeft" data-wow-delay="0.2s" src="../../Images/700x300.jpg"
+                            alt="" />--%>
+                        <img class="img-responsive animated wow fadeInLeft" data-wow-delay="0.2s" src='<%:Url.Content("~/Images/700x300.jpg") %>' alt="Introduction.jpg" />
                     </a>
                 </div>
                 <div class="col-md-4 animated wow fadeInRight" data-wow-delay="0.4s">

@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Photograph_mvc.Models.Blog>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Blog Search - Trip & Shoot
+    Blogs Search - Trip & Shoot
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -11,17 +11,13 @@
 <p>
     <%: Html.ActionLink("Create New", "Create") %>
 </p>
-
-    </form>
-
     <% using (Html.BeginForm("Search", "Blogs")) %>
     <% { %>  
         Enter Subject to search:<br />
     <%= Html.TextBox("subject") %>
     <input type="submit" value="Submit" />
     <% } %>
-
-<table id="tb_blogs">
+<table id="tb_blogs" class="table table-condensed">
     <thead>
     <tr>
         <th>
@@ -33,12 +29,12 @@
         <th>
             <%: Html.DisplayNameFor(model => model.subject) %>
         </th>
-        <th>
+<%--        <th>
             <%: Html.DisplayNameFor(model => model.message) %>
-        </th>
-        <th>
+        </th>--%>
+<%--        <th>
             <%: Html.DisplayNameFor(model => model.image) %>
-        </th>
+        </th>--%>
         <th>
             <%: Html.DisplayNameFor(model => model.postDate) %>
         </th>
@@ -57,12 +53,13 @@
         <td>
             <%: Html.DisplayFor(modelItem => item.subject) %>
         </td>
-        <td>
+<%--        <td>
             <%: Html.DisplayFor(modelItem => item.message) %>
-        </td>
-        <td>
+        </td>--%>
+<%--        <td>
             <%: Html.DisplayFor(modelItem => item.image) %>
-        </td>
+            <img src="<%:Html.DisplayFor(modelItem => item.image)%>" alt="No Picture" class="img-rounded" />
+        </td>--%>
         <td>
             <%: Html.DisplayFor(modelItem => item.postDate) %>
         </td>
@@ -83,6 +80,7 @@
 
 <asp:Content ID="Content4" ContentPlaceHolderID="ScriptsSection" runat="server">
     <script src="../../Scripts/jquery.js"></script>
-        <%:Scripts.Render("~/Scripts/myScript.js") %>
-    <%: Styles.Render("~/Content/myStyleSheet.css") %>
+           <link rel="stylesheet" href="<%: Url.Content("~/Content/myStyleSheet.css") %>" />
+    <script src="<%:Url.Content("~/Scripts/jquery.js") %>" ></script>
+    <script src="<%:Url.Content("~/Scripts/myScript.js") %>" ></script>
 </asp:Content>

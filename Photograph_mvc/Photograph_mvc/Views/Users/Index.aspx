@@ -5,22 +5,20 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-<div class="container padding100">
+<div class="container padding50">
 <h2>User Management</h2>
 
-<p>
+
+    <p>
     <%: Html.ActionLink("Create New", "Create") %>
 </p>
-
-    </form>
-
     <% using(Html.BeginForm("Search", "Users")) %>  
     <% { %>  
         Enter User Name to search:<br />  <%= Html.TextBox("userName") %>  
         <input type="submit" value="Submit" />  
     <% } %>  
 
-<table id="tb_users">
+<table id="tb_users" class="table table-condensed">
     <thead>
     <tr>
         <th>
@@ -83,25 +81,12 @@
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="ScriptsSection" runat="server">
-    <%--@section Scripts{
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $('#tb_users tbody tr:even').css('background-color', 'silver');
 
-                $('#tb_users tr').mouseover(function () {
-                    $(this).css('background-color', 'yellow');
-                });
+    <link rel="stylesheet" href="<%: Url.Content("~/Content/myStyleSheet.css") %>" />
+    <script src="<%:Url.Content("~/Scripts/jquery.js") %>" ></script>
+    <script src="<%:Url.Content("~/Scripts/myScript.js") %>" ></script>
 
-                $('#tb_users tr').mouseout(function () {
-                    $(this).removeAttr('background-color', 'yellow');
-                });
-            });
-           
-        </script>
-    }--%>
-    <script src="../../Scripts/jquery.js"></script>
-    <%:Scripts.Render("~/Scripts/myScript.js") %>
-    <%: Styles.Render("~/Content/myStyleSheet.css") %>
-<%--    <link href="../../Content/myStyleSheet.css" rel="stylesheet" type="text/css" />
+    <%--<script src="../../Scripts/jquery.js"></script>
+    <link href="../../Content/myStyleSheet.css" rel="stylesheet" type="text/css" />
     <script src="../../Scripts/myScript.js"></script>--%>
 </asp:Content>

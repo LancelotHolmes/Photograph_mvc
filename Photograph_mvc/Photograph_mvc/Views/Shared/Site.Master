@@ -10,14 +10,28 @@
     <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
     <meta name="author" content="" />
 
-    <link href="../../Content/bootstrap.min.css" rel='stylesheet' type="text/css" />
-    <link href="../../Content/font-awesome.css" rel='stylesheet' type="text/css" />
-    <link href="../../Content/jquery.smartmenus.bootstrap.css" rel='stylesheet' type="text/css" />
-    <link href="../../Content/1-col-portfolio.css" rel='stylesheet' type="text/css" />
-    <link href="../../Content/owl.carousel.css" rel='stylesheet' type="text/css" />
-    <link href="../../Content/owl.theme.css" rel='stylesheet' type="text/css" />
-    <link href="../../Content/owl.transitions.css" rel='stylesheet' type="text/css" />
-    <link href="../../Content/font-awesome.css" rel='stylesheet' type="text/css" />
+    <%--<link href="../../Content/bootstrap.min.css" rel='stylesheet' type="text/css" />--%>
+    <link rel="stylesheet" href="<%: Url.Content("~/Content/bootstrap.min.css") %>" />
+
+    <%--<link href="../../Content/font-awesome.css" rel='stylesheet' type="text/css" />--%>
+    <link rel="stylesheet" href="<%: Url.Content("~/Content/font-awesome.css") %>" />
+
+    <%--<link href="../../Content/jquery.smartmenus.bootstrap.css" rel='stylesheet' type="text/css" />--%>
+    <link rel="stylesheet" href="<%: Url.Content("~/Content/jquery.smartmenus.bootstrap.css") %>" />
+
+    <%--<link href="../../Content/1-col-portfolio.css" rel='stylesheet' type="text/css" />--%>
+    <link rel="stylesheet" href="<%: Url.Content("~/Content/1-col-portfolio.css") %>" />
+
+    <%--<link href="../../Content/owl.carousel.css" rel='stylesheet' type="text/css" />--%>
+    <link rel="stylesheet" href="<%: Url.Content("~/Content/owl.carousel.css") %>" />
+
+    <%--<link href="../../Content/owl.theme.css" rel='stylesheet' type="text/css" />--%>
+    <link rel="stylesheet" href="<%: Url.Content("~/Content/owl.theme.css") %>" />
+
+    <%--<link href="../../Content/owl.transitions.css" rel='stylesheet' type="text/css" />--%>
+    <link rel="stylesheet" href="<%: Url.Content("~/Content/owl.transitions.css") %>" />
+
+    <%--<link href="../../Content/font-awesome.css" rel='stylesheet' type="text/css" />--%>
 <%--    <link href="../../Content/Site.css" rel='stylesheet' type="text/css" />--%>
 
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css' />
@@ -29,10 +43,10 @@
 <body>
     <form id="form1" runat="server">
         <!-- Navbar fixed top -->
-            <div id="div_menu" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
+      <div id="div_menu" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+         <div class="container">
             <div class="navbar-header">
-                <asp:Label ID="webtitle" runat="server" CssClass="navbar-brand fa fa-camera"> Trip & Shoot</asp:Label>
+                <asp:Label ID="webtitle" runat="server" CssClass="navbar-brand fa fa-camera"> Trip & Shoot </asp:Label>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -43,39 +57,77 @@
                 </ul>
             </div>
         </div>
-    </div>
-
-        <div id="body">
+        </div>
+    </form>
+    
+   <div id="body">
             <asp:ContentPlaceHolder ID="FeaturedContent" runat="server" />
             <section class="content-wrapper main-content clear-fix">
                 <asp:ContentPlaceHolder ID="MainContent" runat="server" />
             </section>
-        </div>
-
-    <!--footer-->
+    </div>
+    <form>
     <footer id="fh5co-footer" class="padding100">
+			
 			<div class="fh5co-footer-content">
 				<div class="container">
 					<div class="row">
-						<div id="div_email" class="col-md-3 col-sm-4 col-md-push-3 animated wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="col-md-3 col-sm-4 col-md-push-3 animated wow fadeInLeft" data-wow-delay="0.2s">
 							<h3 class="fh5co-lead">Contact</h3>
 							<ul>
-								<li>&copy; <%: DateTime.Now.Year %> - My ASP.NET MVC Application</li>
+								<li><a href="#">Email</a></li>
+								
 							</ul>
 						</div>
-						</div>				
+						<div class="col-md-3 col-sm-4 col-md-push-3 animated wow fadeInLeft" data-wow-delay="0.4s">
+							<h3 class="fh5co-lead">About</h3>
+							<ul>
+								<li><a href="http://users.monash.edu.au/~sgrose/msh/disclaimer.htm">Course Disclaimer</a></li>
+								<li><a href="#">Acknowledgement</a></li>
+							</ul>
+						</div>
+						<div class="col-md-3 col-sm-4 col-md-push-3 animated wow fadeInLeft" data-wow-delay="0.6s">
+							<h3 class="fh5co-lead">Designers</h3>
+							<ul>
+								<li><a href="#">Lancelot</a></li>
+								<li><a href="#"></a>Sen</li>
+								
+							</ul>
+						</div>
+
+						<div class="col-md-3 col-sm-12 col-md-pull-9 animated wow fadeInLeft" data-wow-delay="0.8s">
+							<div class="fh5co-footer-logo"><a href="#">FIT5192</a></div>
+							<p class="fh5co-copyright"><small>&copy;Copyrigh <%: DateTime.Now.Year %> - My ASP.NET MVC Application.<br /></small></p>
+							<p class="fh5co-social-icons">
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-instagram"></i></a>
+								<a href="#"><i class="fa fa-github"></i></a>
+								<a href="#"><i class="fa fa-youtube"></i></a>
+							</p>
+						</div>
+						
 					</div>
 				</div>
+			</div>
 		</footer>
+        </form>
     <asp:ContentPlaceHolder ID="ScriptsSection" runat="server" />
-</form>
-    <script src="../../Scripts/jquery.js"></script>
+
+    <script src="<%:Url.Content("~/Scripts/jquery.js") %>" ></script>
+    <script src="<%:Url.Content("~/Scripts/wow.min.js") %>" ></script>
+    <script src="<%:Url.Content("~/Scripts/bootstrap.min.js") %>" ></script>
+    <script src="<%:Url.Content("~/Scripts/tutorial.js") %>" ></script>
+    <script src="<%:Url.Content("~/Scripts/jquery.smartmenus.js") %>" ></script>
+    <script src="<%:Url.Content("~/Scripts/jquery.smartmenus.bootstrap.js") %>" ></script>
+    <script src="<%:Url.Content("~/Scripts/owl.carousel.js") %>" ></script>
+
+<%--    <script src="../../Scripts/jquery.js"></script>
     <script src="../../Scripts/wow.min.js"></script>
     <script src="../../Scripts/bootstrap.min.js"></script>
     <script src="../../Scripts/tutorial.js"></script>
     <script src="../../Scripts/jquery.smartmenus.js"></script>
     <script src="../../Scripts/jquery.smartmenus.bootstrap.js"></script>
-    <script src="../../Scripts/owl.carousel.js"></script>
-
+    <script src="../../Scripts/owl.carousel.js"></script>--%>
 </body>
 </html>

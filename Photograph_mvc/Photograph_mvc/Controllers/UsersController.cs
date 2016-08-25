@@ -27,6 +27,7 @@ namespace Photograph_mvc.Controllers
         public ActionResult Details(int id = 0)
         {
             User user = db.Users.Find(id);
+            
             if (user == null)
             {
                 return HttpNotFound();
@@ -126,6 +127,8 @@ namespace Photograph_mvc.Controllers
             var users = from s in db.Users
                         where s.username.Contains(userName)
                         select s;
+
+
             return View(users);
         }
 

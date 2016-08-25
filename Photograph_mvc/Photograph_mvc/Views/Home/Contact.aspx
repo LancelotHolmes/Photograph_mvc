@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage" %>
 
 <asp:Content ID="contactTitle" ContentPlaceHolderID="TitleContent" runat="server">
-    Contact - Trip & Shoot
+    Contact - My ASP.NET MVC Application
 </asp:Content>
 
 <asp:Content ID="contactContent" ContentPlaceHolderID="MainContent" runat="server">
